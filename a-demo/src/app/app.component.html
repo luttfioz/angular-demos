@@ -1,0 +1,22 @@
+
+<h1>{{ filmTitle }}</h1>
+<br />
+<h4>Film Characters</h4>
+
+
+<ul>
+  <li *ngFor="let character of characters" (click)="selectedCharacter = character">
+    {{character.name}}
+  </li>
+</ul>
+<br />
+
+
+<h4>Selected Character</h4>
+<div [style.background]="selectedCharacter.theme" class="selectedCharacter">
+  {{ selectedCharacter.name }}
+</div>
+
+<br />
+
+{{ filmTitle }} has {{ characters.length }} characters in it.

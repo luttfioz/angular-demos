@@ -1,0 +1,12 @@
+<div *ngIf="films">
+  
+  <h4>Films</h4>
+  <ul>
+    <li *ngFor="let film of films" (click)="selectedFilm = film">
+      {{film.title}}
+    </li>
+  </ul>
+  <br />
+<app-character></app-character>
+
+</div>
